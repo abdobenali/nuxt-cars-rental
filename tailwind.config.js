@@ -7,7 +7,19 @@ export default {
     "./plugins/**/*.{js,ts}",
     "./app.vue",
   ],
-  theme: {},
+  theme: {
+    extend: {
+      colors: {
+        hint: {
+          300: "#90A3BF",
+          400: "#596780",
+        },
+      },
+      fontFamily: {
+        primary: ["Plus Jakarta Sans", "sans-serif"],
+      },
+    },
+  },
   plugins: [],
   mode: "jit",
 };
