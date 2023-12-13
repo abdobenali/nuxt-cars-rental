@@ -1,4 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useFavoriteCarsStore } from "~/store/cars";
+import { storeToRefs } from "pinia";
+
+const store = useFavoriteCarsStore();
+const { isCarMarkedAsFavorite } = storeToRefs(store);
+</script>
 
 <template>
   <div>
@@ -93,10 +99,23 @@
                 <Heart
                   :class="
                     cn('cursor-pointer fill-none mt-1', {
-                      'fill-red-500 stroke-red-500': false,
+                      'fill-red-500 stroke-red-500': isCarMarkedAsFavorite(
+                        car?.id
+                      ),
                     })
                   "
-                  @click.prevent="console.log('clicked')"
+                  @click.prevent="
+                    store.toggleFavorite({
+                      id: car.id,
+                      name: car.name,
+                      type: car.type,
+                      gasolineLiter: car.gasolineLiter,
+                      kindOfTransition: car.kindOfTransition,
+                      people: car.people,
+                      pricePerDay: car.pricePerDay,
+                      img: car.img,
+                    })
+                  "
                 />
               </ClientOnly>
             </div>

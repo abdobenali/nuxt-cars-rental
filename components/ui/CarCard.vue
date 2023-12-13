@@ -1,5 +1,11 @@
 <script setup lang="ts">
+import { storeToRefs } from "pinia";
+
+import { useFavoriteCarsStore } from "~/store/cars";
 import type { Car } from "~/types";
+
+const store = useFavoriteCarsStore();
+const { isCarMarkedAsFavorite } = storeToRefs(store);
 
 const props = defineProps({
   data: {
@@ -40,12 +46,23 @@ const {
       <ClientOnly>
         <div>
           <Heart
-            @click.prevent="console.log"
+            @click.prevent="
+              store.toggleFavorite({
+                id,
+                name,
+                type,
+                gasolineLiter,
+                kindOfTransition,
+                people,
+                pricePerDay,
+                img,
+              })
+            "
             :class="
               cn(
                 'cursor-pointer fill-none hover:fill-red-500/75 active:stroke-red-500/75',
                 {
-                  'fill-red-500 stroke-red-500': false,
+                  'fill-red-500 stroke-red-500': isCarMarkedAsFavorite(id),
                 }
               )
             "
