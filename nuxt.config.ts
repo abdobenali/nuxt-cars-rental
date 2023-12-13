@@ -1,6 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: true,
+  routeRules: {
+    "/proxy/**": {
+      proxy: { to: "https://dm-assignment-commonshare.koyeb.app/api/**" },
+    },
+  },
   components: [
     {
       path: "~/components",
