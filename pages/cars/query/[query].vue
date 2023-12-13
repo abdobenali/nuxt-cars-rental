@@ -4,7 +4,13 @@
   >
     <div class="flex flex-col gap-5">
       <div class="flex justify-between items-center">
-        <h3 class="text-gray-500 font-primary font-medium text-lg">
+        <span
+          v-if="isPending"
+          class="text-gray-500 font-primary font-medium text-lg"
+        >
+          Loading...
+        </span>
+        <h3 v-else class="text-gray-500 font-primary font-medium text-lg">
           {{ foundCarsByQuery.length }} results found about
           <span class="font-bold"> '{{ query }}'</span>
         </h3>
@@ -29,7 +35,7 @@
           @click="handleShowMore"
           class="w-fit px-5 text-white font-primary font-semibold h-[44px] rounded-[4px] bg-blue-600 hover:bg-blue-500 cursor-pointer"
         >
-          <span v-if="isPending">loading... </span>
+          <span v-if="isPending">Loading... </span>
           <span v-else> Show more cars </span>
         </button>
       </div>
@@ -87,4 +93,9 @@ const loadFoundCarsByQuery = async () => {
     lastPage.value = res?.meta?.last_page;
   }
 };
+
+useHead({
+  title: `Search '${query}'`,
+  ogTitle: `Search '${query}'`,
+});
 </script>

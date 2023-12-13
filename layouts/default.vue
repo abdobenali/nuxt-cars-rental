@@ -1,6 +1,18 @@
 <script setup>
 const route = useRoute();
 const { query } = route.params;
+
+useSeoMeta({
+  title: "Nuxt Cars Rental",
+  ogTitle: "Nuxt Cars Rental",
+  description:
+    "Car rental services that provides cheap car rental services and safe and comfortable facilities.",
+  ogDescription:
+    "Car rental services that provides cheap car rental services and safe and comfortable facilities.",
+  image: "/ogImage.svg",
+  ogImage: "/ogImage.svg",
+  twitterCard: "summary_large_image",
+});
 </script>
 
 <template>
