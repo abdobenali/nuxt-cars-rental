@@ -1,75 +1,51 @@
-# Nuxt 3 Minimal Starter
+# About
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+**nuxt-cars-rental** : A web application for renting cars, developed entirely using Nuxt 3.
 
-## Setup
+- Live Demo : [Link](https://nuxt-cars-rental-app.vercel.app/)
 
-Make sure to install the dependencies:
+## :construction_worker_man: Build With
 
-```bash
-# npm
-npm install
+- [Nuxt3](https://nuxt.com/docs/getting-started/deployment)
+- [TypeScript](https://www.typescriptlang.org/) 
+- [Tailwindcss](https://tailwindcss.com/)
+- [Pinia](https://pinia.vuejs.org/)
+- [SCSS](https://sass-lang.com/)
+- [Vercel](https://vercel.com/home)
 
-# pnpm
-pnpm install
+ ## :rocket: Getting Started
 
-# yarn
-yarn install
+Node.js version 18 or above is required.
 
-# bun
-bun install
-```
+1. Clone this repo
+   ```bash
+   git clone https://github.com/abdobenali/nuxt-cars-rental
+   ```
+2. Run `npm install && npm run dev`
+   > Serve with hot reload at localhost:3000
 
-## Development Server
+## :sparkles: Features
 
-Start the development server on `http://localhost:3000`:
+1. Discover Popular and Recommended Cars:
 
-```bash
-# npm
-npm run dev
+   - Explore a list of popular and recommended cars.
 
-# pnpm
-pnpm run dev
+2. Access Comprehensive Car Details:
 
-# yarn
-yarn dev
+    - Obtain in-depth information about each car.
 
-# bun
-bun run dev
-```
+3. Efficient Car Name Search:
 
-## Production
+    - Search for specific cars by name, ensuring a quick browsing experience.
 
-Build the application for production:
+4. Bookmark Your Preferred Cars:
 
-```bash
-# npm
-npm run build
+    - Mark your favorite cars to create a personalized collection for easy reference and quick access.
 
-# pnpm
-pnpm run build
+5. Optimized for All Devices:
 
-# yarn
-yarn build
+    - Enjoy a fully responsive design that adapts seamlessly to various screen sizes.
 
-# bun
-bun run build
-```
+6. Enhanced SEO Performance:
 
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+    - Benefit from SEO-friendly elements that improve the discoverability of the application, ensuring better visibility on search engines.
